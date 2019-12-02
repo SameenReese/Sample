@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<AlteryxDocument yxmdVer="9.5">
+<AlteryxDocument yxmdVer="2019.1">
   <Nodes>
     <Node ToolID="157">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
@@ -1552,6 +1552,20 @@ Macro to add total row and columns to a data table</Text>
         </Annotation>
       </Properties>
     </Node>
+    <Node ToolID="158">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1470" y="1098" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
   </Nodes>
   <Connections>
     <Connection>
@@ -1715,6 +1729,10 @@ Macro to add total row and columns to a data table</Text>
       <Destination ToolID="144" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="147" Connection="Output" />
+      <Destination ToolID="158" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="149" Connection="Right" />
       <Destination ToolID="148" Connection="Input" />
     </Connection>
@@ -1744,6 +1762,7 @@ Macro to add total row and columns to a data table</Text>
     <ConvErrorLimit_Stop value="False" />
     <CancelOnError value="False" />
     <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
     <DisableAllOutput value="False" />
     <ShowAllMacroMessages value="False" />
     <ShowConnectionStatusIsOn value="True" />
@@ -1792,12 +1811,19 @@ Macro to add total row and columns to a data table</Text>
       <NameIsFileName value="False" />
       <Name><![CDATA[  Add Totals]]></Name>
       <Description>Macro to add total row and columns to a data table</Description>
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
       <CategoryName />
       <SearchTags>Transform, Chaos, Chaos Reigns Within, Total</SearchTags>
       <Author>Adam Riley</Author>
       <Company>ChaosReignsWithIn</Company>
       <Copyright>ChaosReignsWithIn</Copyright>
       <DescriptionLink actual="www.ChaosReignsWithIn.com" displayed="www.ChaosReignsWithIn.com" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
     </MetaInfo>
     <Events>
       <Enabled value="True" />
@@ -1997,6 +2023,7 @@ Macro to add total row and columns to a data table</Text>
         <Tool ToolId="114" Selected="True" />
         <Tool ToolId="113" Selected="True" />
         <Tool ToolId="25" Selected="False" />
+        <Tool ToolId="158" Selected="False" />
       </Wiz_OpenOutputTools>
       <Wiz_OutputMessage />
       <Wiz_NoOutputFilesMessage />
